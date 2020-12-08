@@ -1,5 +1,9 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar'; //el componente que trato de incorporar no aparece en pantalla, excepto que borre "App". cómo lo resuelvo?
+
+NavBar();
 
 function App() {
   return (
@@ -22,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
