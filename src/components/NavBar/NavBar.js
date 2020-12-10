@@ -1,13 +1,17 @@
+import React from 'react';
+import CartWidget from '../CartWidget/CartWidget';
+
 function NavBar () {
     return (
-        <div className = "navBar">
-            <ul>
+        <>
+            <ul className = "navBar">
                 <li>Cpu's</li>
                 <li>Vga's</li>
                 <li>Mobo's</li>
                 <li>Psu's</li>                
             </ul>
-        </div> 
+            <CartWidget/>
+        </> 
     );
 }
 
