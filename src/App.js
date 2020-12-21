@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBar>        
       </NavBar>      
-      <ItemCount/>
+      <ItemCount max={10} cont={1}/>
     </>
   );
 }

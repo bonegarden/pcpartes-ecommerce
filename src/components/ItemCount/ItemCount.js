@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Contador = () => {
-    const [contador, setContador] = React.useState(1);
-    const [stock] = React.useState(10);
-
-    const sumarItem = () => {
+const Contador = ({max, cont}) => {
+    const [contador, setContador] = React.useState(cont); //1
+    const [stock] = React.useState(max);                //10
+    
+    const onAdd = () => {
         if (contador < stock) {
             setContador (contador + 1)       
         }
     }
 
-    const restarItem = () => {
-        if (contador > 0 ) {
-            setContador (contador-1)                        
+    const onRemove = () => {
+        if (contador > 0  || contador == stock ) {
+            setContador (contador - 1)                        
         }
 
     }    
@@ -20,8 +20,8 @@ const Contador = () => {
     return (
         <>
             <p>Tenés {contador} ítem(s) de {stock}</p>
-            <button onClick = {sumarItem}>Sumar</button>
-            <button onClick = {restarItem}>Restar</button>
+            <button onClick = {onAdd}>Sumar</button>
+            <button onClick = {onRemove}>Restar</button>
         </>
     );
 }
