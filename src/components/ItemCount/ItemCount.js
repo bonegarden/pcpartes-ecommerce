@@ -11,7 +11,7 @@ const Contador = ({max, cont}) => {
     }
 
     const onRemove = () => {
-        if (contador > 0  || contador == stock ) {
+        if (contador > 0  || contador === stock ) {
             setContador (contador - 1)                        
         }
 
